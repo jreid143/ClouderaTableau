@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|AnyCPU">
+      <Configuration>Debug</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|AnyCPU">
+      <Configuration>Release</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>525ec0f8-8aee-4e26-a883-28e2d6e5d401</ProjectGuid>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetFrameworkIdentifier>Deployment</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>1.0</TargetFrameworkVersion>
+    <PrepareForBuildDependsOn>
+    </PrepareForBuildDependsOn>
+  </PropertyGroup>
+  <Import Condition=" Exists('Deployment.targets') " Project="Deployment.targets" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
+  <!-- vertag<:>start tokens<:>maj.min -->
+  <Import Condition=" Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Deployment\1.1\DeploymentProject.targets') " Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Deployment\1.1\DeploymentProject.targets" />
+  <!-- vertag<:>end -->
+  <ItemGroup>
+    <Content Include="azuredeploy.parameters.json" />
+    <Content Include="azuredeploy.json" />
+    <Content Include=".gitattributes" />
+    <Content Include="data-node-ds13.json" />
+    <Content Include="data-node-ds14.json" />
+    <None Include="Deployment.targets">
+      <Visible>False</Visible>
+    </None>
+    <Content Include="Deploy-AzureResourceGroup.ps1" />
+    <Content Include="README.md" />
+    <Content Include="ds13.json" />
+    <Content Include="master-node.json" />
+    <Content Include="scripts\bootstrap-cloudera.sh" />
+    <Content Include="setup-cloudera.json" />
+    <Content Include="LICENSE.txt" />
+    <Content Include="deploy_cdh.ps1" />
+    <Content Include="scripts\cmxDeployOnIbiza.py" />
+    <Content Include="scripts\initialize-cloudera-server.sh" />
+    <Content Include="scripts\initialize-node.sh" />
+    <Content Include="scripts\install-postgresql.sh" />
+    <Content Include="scripts\prepare-datanode-disks.sh" />
+    <Content Include="scripts\prepare-masternode-disks.sh" />
+    <Content Include="shared-resources-existing-vnet.json" />
+    <Content Include="shared-resources-new-vnet.json" />
+  </ItemGroup>
+  <Target Name="GetReferenceAssemblyPaths" />
+</Project>
