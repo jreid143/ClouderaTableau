@@ -197,7 +197,7 @@
         "autoUpgradeMinorVersion": "true",
         "settings": {
           "fileUris": [
-            "https://github.com/jreid143/ClouderaTableau/tree/master/ClouderaTableau/scripts/tableau-install.ps1"
+            "https://github.com/jreid143/ClouderaTableau/tree/master/ClouderaTableau/tableau-install.ps1"
           ],
           "commandToExecute": "powershell.exe -ExecutionPolicy Unrestricted -File install.ps1"
         }
