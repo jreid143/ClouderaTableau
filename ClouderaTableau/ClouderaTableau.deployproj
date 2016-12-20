@@ -49,6 +49,8 @@
     <Content Include="scripts\prepare-masternode-disks.sh" />
     <Content Include="shared-resources-existing-vnet.json" />
     <Content Include="shared-resources-new-vnet.json" />
+    <None Include="scripts\tableau-install.ps1" />
+    <None Include="tableau-server.json" />
   </ItemGroup>
   <Target Name="GetReferenceAssemblyPaths" />
 </Project>
