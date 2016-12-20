@@ -3,10 +3,31 @@
     "contentVersion": "1.0.0.1",
     "parameters": {
         "storageAccountPrefix": {
-            "value": null
+            "value": "p2pstrg"
         },
         "dnsNamePrefix": {
-            "value": null
+            "value": "p2pautodeploy"
+        },
+        "adminUserName": {
+            "value": "p2padmin"
+        },
+        "adminPassword": {
+            "value": "Welcome.1234"
+        },
+        "cmUsername": {
+            "value": "p2padmin"
+        },
+        "cmPassword": {
+            "value": "Welcome.1234"
+        },
+        "masterStorageAccountType": {
+            "value": "Standard_LRS"
+        },
+        "virtualNetworkName": {
+            "value": "p2pautodeployVNet"
+        },
+        "subnet1Name": {
+            "value": "tableausubnet"
         }
     }
 }

@@ -260,6 +260,15 @@
                 "id": "[resourceId('Microsoft.Network/networkSecurityGroups', concat(parameters('networkSpec').virtualNetworkName, '-sg'))]"
               }
             }
+          },
+          {
+            "name": "[parameters('networkSpec').virtualNetworkSubnet1Name]",
+            "properties": {
+              "addressPrefix": "[parameters('networkSpec').subnet1Prefix]",
+              "networkSecurityGroup": {
+                "id": "[resourceId('Microsoft.Network/networkSecurityGroups', concat(parameters('networkSpec').virtualNetworkName, '-sg'))]"
+              }
+            }
           }
         ]
       }
