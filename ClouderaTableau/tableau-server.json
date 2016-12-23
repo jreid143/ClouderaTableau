@@ -132,19 +132,24 @@
         "[concat('Microsoft.Network/networkInterfaces/', variables('nicName'))]"
       ],
       "properties": {
-        "hardwareProfile": {
-          "vmSize": "[variables('vmSize')]"
+        "plan": {
+          "name": "bring-your-own-license",
+          "product": "tableau-server",
+          "publisher": "tableau"
         },
-        "osProfile": {
-          "computerName": "[variables('vmName')]",
-          "adminUsername": "[parameters('adminUsername')]",
-          "adminPassword": "[parameters('adminPassword')]"
-        },
+          "hardwareProfile": {
+            "vmSize": "[variables('vmSize')]"
+          },
+          "osProfile": {
+            "computerName": "[variables('vmName')]",
+            "adminUsername": "[parameters('adminUsername')]",
+            "adminPassword": "[parameters('adminPassword')]"
+          },
         "storageProfile": {
           "imageReference": {
-            "publisher": "[variables('imagePublisher')]",
-            "offer": "[variables('imageOffer')]",
-            "sku": "[parameters('windowsOSVersion')]",
+            "publisher": "tableau",
+            "offer": "tableau-server",
+            "sku": "bring-your-own-license",
             "version": "latest"
           },
           "osDisk": {
@@ -179,27 +184,6 @@
             "enabled": "true",
             "storageUri": "[concat('http://',variables('storageAccountName'),'.blob.core.windows.net')]"
           }
-        }
-      }
-    },
-    {
-      "type": "Microsoft.Compute/virtualMachines/extensions",
-      "name": "[concat(variables('vmName'),'/', 'TableauServerInstall')]",
-      "apiVersion": "2015-05-01-preview",
-      "location": "[resourceGroup().location]",
-      "dependsOn": [
-        "[concat('Microsoft.Compute/virtualMachines/', variables('vmName'))]"
-      ],
-      "properties": {
-        "publisher": "Microsoft.Compute",
-        "type": "CustomScriptExtension",
-        "typeHandlerVersion": "1.3",
-        "autoUpgradeMinorVersion": "true",
-        "settings": {
-          "fileUris": [
-            "https://github.com/jreid143/ClouderaTableau/tree/master/ClouderaTableau/tableau-install.ps1"
-          ],
-          "commandToExecute": "powershell.exe -ExecutionPolicy Unrestricted -File install.ps1"
         }
       }
     }

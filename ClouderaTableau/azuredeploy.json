@@ -102,7 +102,7 @@
     },
     "subnet1Name": {
       "type": "string",
-      "defaultValue": "clouderasubnet",
+      "defaultValue": "tableausubnet",
       "metadata": {
         "description": "Subnet name for the virtual network where resources will be provisioned"
       }
@@ -281,8 +281,9 @@
       "adminUserName": "[parameters('adminUserName')]",
       "adminPassword": "[parameters('adminPassword')]",
       "masterNodeASName": "[concat(parameters('dnsNamePrefix'), '-mnAS')]",
-      "dataNodeASName": "[concat(parameters('dnsNamePrefix'), '-dnAS')]"
-    },
+      "dataNodeASName": "[concat(parameters('dnsNamePrefix'), '-dnAS')]",
+        "tableauASName":  "[concat(parameters('dnsNamePrefix'), '-tableau')]"
+      },  
     "networkSpec": {
       "addressPrefix": "[variables('addressPrefix')]",
       "subnetPrefix": "[variables('subnetPrefix')]",
