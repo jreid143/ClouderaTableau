@@ -2,8 +2,8 @@
   "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.1",
   "parameters": {
-    "resourceAPIVersion":{
-      "type":"string"
+    "resourceAPIVersion": {
+      "type": "string"
     },
     "networkSpec": {
       "type": "object"
@@ -12,6 +12,9 @@
       "type": "string"
     },
     "dataNodeASName": {
+      "type": "string"
+    },
+    "tableauASName": {
       "type": "string"
     }
   },
@@ -22,14 +25,21 @@
       "type": "Microsoft.Compute/availabilitySets",
       "name": "[parameters('masterNodeASName')]",
       "location": "[resourceGroup().location]",
-      "properties": { }
+      "properties": {}
     },
     {
       "apiVersion": "[parameters('resourceAPIVersion')]",
       "type": "Microsoft.Compute/availabilitySets",
       "name": "[parameters('dataNodeASName')]",
       "location": "[resourceGroup().location]",
-      "properties": { }
+      "properties": {}
+    },
+    {
+      "apiVersion": "[parameters('resourceAPIVersion')]",
+      "type": "Microsoft.Compute/availabilitySets",
+      "name": "[parameters('tableauASName')]",
+      "location": "[resourceGroup().location]",
+      "properties": {}
     },
     {
       "apiVersion": "[parameters('resourceAPIVersion')]",

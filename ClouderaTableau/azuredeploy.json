@@ -282,7 +282,7 @@
       "adminPassword": "[parameters('adminPassword')]",
       "masterNodeASName": "[concat(parameters('dnsNamePrefix'), '-mnAS')]",
       "dataNodeASName": "[concat(parameters('dnsNamePrefix'), '-dnAS')]",
-        "tableauASName":  "[concat(parameters('dnsNamePrefix'), '-tableau')]"
+      "tableauASName":  "[concat(parameters('dnsNamePrefix'), '-tableau')]"
       },  
     "networkSpec": {
       "addressPrefix": "[variables('addressPrefix')]",
