@@ -9,7 +9,7 @@ Once the trial has concluded, the Cloudera Enterprise features will be disabled 
 </a>
 
 
-Version 2016-05-26
+Version 2016-12-26
 
 END USER LICENSE TERMS AND CONDITIONS
 
