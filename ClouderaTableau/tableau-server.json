@@ -127,9 +127,9 @@
           "product": "tableau-server",
           "publisher": "tableau"
         },
-          "hardwareProfile": {
-            "vmSize": "[variables('vmSize')]"
-          },
+        "hardwareProfile": {
+          "vmSize": "[parameters('vmSpec').vmSize]"
+        },
           "osProfile": {
             "computerName": "[variables('vmName')]",
             "adminUsername": "[parameters('adminUsername')]",
