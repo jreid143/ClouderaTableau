@@ -121,20 +121,20 @@
         "[concat('Microsoft.Storage/storageAccounts/', variables('storageAccountName'))]",
         "[concat('Microsoft.Network/networkInterfaces/', variables('nicName'))]"
       ],
+      "plan": {
+        "name": "bring-your-own-license",
+        "product": "tableau-server",
+        "publisher": "tableau"
+      },
       "properties": {
-        "plan": {
-          "name": "bring-your-own-license",
-          "product": "tableau-server",
-          "publisher": "tableau"
-        },
         "hardwareProfile": {
           "vmSize": "[parameters('vmSpec').vmSize]"
         },
-          "osProfile": {
-            "computerName": "[variables('vmName')]",
-            "adminUsername": "[parameters('adminUsername')]",
-            "adminPassword": "[parameters('adminPassword')]"
-          },
+        "osProfile": {
+          "computerName": "[variables('vmName')]",
+          "adminUsername": "[parameters('adminUsername')]",
+          "adminPassword": "[parameters('adminPassword')]"
+        },
         "storageProfile": {
           "imageReference": {
             "publisher": "tableau",
