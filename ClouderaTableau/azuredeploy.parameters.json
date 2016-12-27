@@ -3,10 +3,10 @@
     "contentVersion": "1.0.0.1",
     "parameters": {
         "storageAccountPrefix": {
-            "value": "p2pstrg"
+            "value": "cltab"
         },
         "dnsNamePrefix": {
-            "value": "p2pautodeploy"
+            "value": "cltab"
         },
         "adminUserName": {
             "value": "p2padmin"
@@ -24,7 +24,7 @@
             "value": "Standard_LRS"
         },
         "virtualNetworkName": {
-            "value": "p2pautodeployVNet"
+            "value": "cltabVNet"
         },
         "subnet1Name": {
             "value": "tableausubnet"
