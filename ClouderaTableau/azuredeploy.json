@@ -458,6 +458,9 @@
           "networkSpec": {
             "value": "[variables('networkSpec')]"
           },
+          "adminUserName": {
+            "value": "[parameters('adminUserName')]"
+          },
           "adminPassword": {
             "value": "[parameters('adminPassword')]"
           }
