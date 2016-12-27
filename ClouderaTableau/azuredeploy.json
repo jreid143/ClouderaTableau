@@ -247,12 +247,12 @@
     "installCDH": "True",
     "addressPrefix": "[parameters('addressPrefix')]",
     "subnetPrefix": "[parameters('subnetPrefix')]",
-    "subnet1Prefix":  "[parameters('subnet1Prefix')]",
-    "scriptsUri": "https://github.com/jreid143/ClouderaTableau/tree/master/ClouderaTableau",
+    "subnet1Prefix": "[parameters('subnet1Prefix')]",
+    "scriptsUri": "https://raw.githubusercontent.com/jreid143/ClouderaTableau/master/ClouderaTableau",
     "share-resourcesUri": "[concat(variables('scriptsUri'), '/shared-resources-', parameters('vnetNewOrExisting'), '-vnet.json')]",
     "data-nodeUri": "[concat(variables('scriptsUri'), '/data-node-', toLower(subString(parameters('vmSize'), 9, 4)), '.json')]",
     "sa": "[parameters('masterNodeIPAddress')]",
-    "tableau":  "[parameters('tableauIPAddress')]",
+    "tableau": "[parameters('tableauIPAddress')]",
     "ipOctet01": "[concat(split(variables('sa'), '.')[0], '.', split(variables('sa'), '.')[1], '.')]",
     "ipOctet2": "[int(split(variables('sa'), '.')[2])]",
     "ipOctet3": "[int(split(variables('sa'), '.')[3])]",
@@ -282,8 +282,8 @@
       "adminPassword": "[parameters('adminPassword')]",
       "masterNodeASName": "[concat(parameters('dnsNamePrefix'), '-mnAS')]",
       "dataNodeASName": "[concat(parameters('dnsNamePrefix'), '-dnAS')]",
-      "tableauASName":  "[concat(parameters('dnsNamePrefix'), '-tableau')]"
-      },  
+      "tableauASName": "[concat(parameters('dnsNamePrefix'), '-tableau')]"
+    },
     "networkSpec": {
       "addressPrefix": "[variables('addressPrefix')]",
       "subnetPrefix": "[variables('subnetPrefix')]",
