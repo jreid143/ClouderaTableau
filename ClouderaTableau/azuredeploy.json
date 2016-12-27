@@ -323,6 +323,9 @@
           "networkSpec": {
             "value": "[variables('networkSpec')]"
           },
+          "tableauASName": {
+            "value": "[variables('vmSpec').tableauASName]"
+          },
           "masterNodeASName": {
             "value": "[variables('vmSpec').masterNodeASName]"
           },
@@ -454,6 +457,9 @@
           },
           "networkSpec": {
             "value": "[variables('networkSpec')]"
+          },
+          "adminPassword": {
+            "value": "[parameters('adminPassword')]"
           }
         }
       }
