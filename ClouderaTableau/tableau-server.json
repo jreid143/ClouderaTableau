@@ -50,7 +50,7 @@
     }
   },
   "variables": {
-    "storageAccountName": "[concat('nn', parameters('storageAccount').prefix)]",
+    "storageAccountName": "[concat('ts', parameters('storageAccount').prefix)]",
     "sizeOfDiskInGB": "100",
     "dataDisk1VhdName": "datadisk1",
     "imagePublisher": "MicrosoftWindowsServer",
@@ -70,13 +70,9 @@
   "resources": [
     {
       "type": "Microsoft.Storage/storageAccounts",
-      "name": "[concat(copyIndex(), variables('storageAccountName'))]",
+      "name": "[variables('storageAccountName')]",
       "apiVersion": "[parameters('resourceAPIVersion')]",
       "location": "[resourceGroup().location]",
-      "copy": {
-        "name": "storageAccountLoop",
-        "count": "[parameters('vmCount')]"
-      },
       "properties": {
         "accountType": "[parameters('storageAccount').type]"
       }
