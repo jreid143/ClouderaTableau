@@ -33,9 +33,6 @@
     "vmSpec": {
       "type": "secureObject"
     },
-    "vmCount": {
-      "type": "int"
-    },
     "networkSpec": {
       "type": "object"
     },
