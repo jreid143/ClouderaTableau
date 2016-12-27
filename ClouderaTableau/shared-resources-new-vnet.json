@@ -243,6 +243,20 @@
               "priority": 113,
               "direction": "Inbound"
             }
+          },
+          {
+            "name": "RDP",
+            "properties": {
+              "description": "Allow RDP Traffic",
+              "protocol": "Tcp",
+              "sourcePortRange": "*",
+              "destinationPortRange": "3389",
+              "sourceAddressPrefix": "*",
+              "destinationAddressPrefix": "*",
+              "access": "Allow",
+              "priority": 114,
+              "direction": "Inbound"
+            }
           }
         ]
       }
