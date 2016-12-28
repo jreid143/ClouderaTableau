@@ -144,7 +144,7 @@ Once the deployment is complete, you can navigate to the Cloudera portal to watc
 - Sample data can be loaded into Cloudera Impala and viewed via a Tableau dashboard.
 - The following steps can only be executed after all Cloudera and Tableau servers have deployed successfully. 
 
-To generate and load the sample data, connect to the "-mn0" node (referenced above) using PuTTY or another SSH client tool.  Execute the following commands via the command line:
+To generate and load the sample data, connect to the "-mn0" Cloudera master node (referenced above) using PuTTY or another SSH client tool.  Execute the following commands via the command line:
 
 - sudo su - hdfs
 - get https://clouderatableau.blob.core.windows.net/datagen/datagen.tar.gz
@@ -152,7 +152,7 @@ To generate and load the sample data, connect to the "-mn0" node (referenced abo
 - cd datagen
 - sh datagen.sh 2
 
-Next, connect to the "-dn0" node (referenced above) using PuTTY or another SSH client tool.  Execute the following commands via the command line:
+Next, connect to the "-dn0" Cloudera worker node (referenced above) using PuTTY or another SSH client tool.  Execute the following commands via the command line:
 
 - sudo su - hdfs
 - wget https://clouderatableau.blob.core.windows.net/datagen/datagen.tar.gz
@@ -162,7 +162,7 @@ Next, connect to the "-dn0" node (referenced above) using PuTTY or another SSH c
 
 The sample data should now be accessible in Hadoop Hive (tpch_text_2 database) and Cloudera Impala (tpch_parquet database).
 
-Next, remote into the Tableau server using the "Connect" button for the Tableau Virtual Machine (VM).  This will establish an RDP session into the Tableau Windows Server.  Follow the registration process and enter the appropriate Tableau license key.  This step must be completed before the dashboard can be deployed.
+Next, using the Microsoft Azure portal, remote into the Tableau server using the "Connect" button for the Tableau Virtual Machine (VM).  This will establish an RDP session into the Tableau Windows Server.  Follow the registration process and enter the appropriate Tableau license key.  This step must be completed before the dashboard can be deployed.
 
 To complete the process of viewing the Cloudera Impala sample data with a Tableau dashboard, install the Cloudera Impala driver for Windows on the Tableau server:
 
