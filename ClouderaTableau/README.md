@@ -140,7 +140,7 @@ Once the deployment is complete, you can navigate to the Cloudera portal to watc
 
 	http://[dnsNamePrefix]-mn0.[region].cloudapp.azure.com:7180
 
-##Loading Sample Data and Viewing it with a Tableau Dashboard (Optional)
+##Loading sample data and viewing it with a Tableau dashboard (optional)
 - Sample data can be loaded into Cloudera Impala and viewed via a Tableau dashboard.
 - The following steps can only be executed after all Cloudera and Tableau servers have deployed successfully. 
 
