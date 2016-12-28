@@ -136,12 +136,13 @@ To connect to the master node via SSH, use the username and password used for de
 
 	ssh testuser@[dnsNamePrefix]-mn0.[region].cloudapp.azure.com
 
-Once the deployment is complete, you can navigate to the Cloudera portal to watch the operation and track it's status. Be aware that the portal dashboard will report alerts since the services are still being installed.
+Once the deployment is complete, you can navigate to the Cloudera portal to watch the operation and track its status. Be aware that the portal dashboard will report alerts since the services are still being installed.
 
 	http://[dnsNamePrefix]-mn0.[region].cloudapp.azure.com:7180
 
 ##Loading Sample Data and Viewing it with a Tableau Dashboard (Optional)
 - Sample data can be loaded into Cloudera Impala and viewed via a Tableau dashboard.
+- The following steps can only be executed after all Cloudera and Tableau servers have deployed successfully. 
 
 To generate and load the sample data, connect to the "-mn0" node (referenced above) using PuTTY or another SSH client tool.  Execute the following commands via the command line:
 
@@ -160,6 +161,16 @@ Next, connect to the "-dn0" node (referenced above) using PuTTY or another SSH c
 - sh load_data.sh
 
 The sample data should now be accessible in Hadoop Hive (tpch_text_2 database) and Cloudera Impala (tpch_parquet database).
+
+Next, remote into the Tableau server using the "Connect" button for the Tableau Virtual Machine (VM).  This will establish an RDP session into the Tableau Windows Server.  Follow the registration process and enter the appropriate Tableau license key.  This step must be completed before the dashboard can be deployed.
+
+To complete the process of viewing the Cloudera Impala sample data with a Tableau dashboard, install the Cloudera Impala driver for Windows on the Tableau server:
+
+- Navigate to http://www.cloudera.com/downloads/connectors/impala/odbc.html and select the Windows 64-bit driver.  Follow the registration process and download the driver.
+- Copy the driver file to the Tableau server and double-click on it to install.
+- Download the sample Tableau dashboard from: https://github.com/jreid143/ClouderaTableau/blob/master/ClouderaTableau/tableau/Cloudera%20Widget%20Dashboard.twbx
+- Using Tableau Desktop, deploy the "Cloudera Widget Dashboard.twbx" file to the Tableau Server "Tableau Samples" project.
+- Click on the "Cloudera Widget Dashboard" under the "Tableau Samples" project to view the Cloudera Impala sample data.
 
 ##Notes, Known Issues & Limitations
 - All nodes in the cluster have a public IP address.
