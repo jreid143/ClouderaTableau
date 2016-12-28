@@ -145,19 +145,19 @@ Once the deployment is complete, you can navigate to the Cloudera portal to watc
 
 To generate and load the sample data, connect to the "-mn0" node (referenced above) using PuTTY or another SSH client tool.  Execute the following commands via the command line:
 
-1) sudo su - hdfs
-2) wget https://clouderatableau.blob.core.windows.net/datagen/datagen.tar.gz
-3) tar -zxf datagen.tar.gz
-4) cd datagen
-5) sh datagen.sh 2
+- sudo su - hdfs
+- get https://clouderatableau.blob.core.windows.net/datagen/datagen.tar.gz
+- tar -zxf datagen.tar.gz
+- cd datagen
+- sh datagen.sh 2
 
 Next, connect to the "-dn0" node (referenced above) using PuTTY or another SSH client tool.  Execute the following commands via the command line:
 
-1) sudo su - hdfs
-2) wget https://clouderatableau.blob.core.windows.net/datagen/datagen.tar.gz
-3) tar -zxf datagen.tar.gz
-4) cd datagen
-5) sh load_data.sh
+- sudo su - hdfs
+- wget https://clouderatableau.blob.core.windows.net/datagen/datagen.tar.gz
+- tar -zxf datagen.tar.gz
+- cd datagen
+- sh load_data.sh
 
 The sample data should now be accessible in Hadoop Hive (tpch_text_2 database) and Cloudera Impala (tpch_parquet database).
 
