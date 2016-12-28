@@ -140,6 +140,9 @@ Once the deployment is complete, you can navigate to the Cloudera portal to watc
 
 	http://[dnsNamePrefix]-mn0.[region].cloudapp.azure.com:7180
 
+##Loading Sample Data and Viewing it with a Tableau Dashboard (Optional)
+- Sample data can be loaded into Cloudera Impala and viewed via a Tableau dashboard.
+
 ##Notes, Known Issues & Limitations
 - All nodes in the cluster have a public IP address.
 - The deployment script is not yet idempotent and cannot handle updates (although it currently works for initial provisioning only)
