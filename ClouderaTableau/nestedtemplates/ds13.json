@@ -227,8 +227,8 @@
     "addressPrefix":"[parameters('addressPrefix')]",
     "subnetPrefix":"[parameters('subnetPrefix')]",
     "scriptsUri": "https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/cloudera-on-centos",
-    "share-resourcesUri": "[concat(variables('scriptsUri'), '/shared-resources-', parameters('vnetNewOrExisting'), '-vnet.json')]",
-    "data-nodeUri":"[concat(variables('scriptsUri'), '/data-node-', toLower(subString(parameters('vmSize'), 9, 4)), '.json')]",
+    "share-resourcesUri": "[concat(variables('scriptsUri'), '/nestedtemplates/shared-resources-', parameters('vnetNewOrExisting'), '-vnet.json')]",
+    "data-nodeUri":"[concat(variables('scriptsUri'), '/nestedtemplates/data-node-', toLower(subString(parameters('vmSize'), 9, 4)), '.json')]",
     "sa": "[parameters('masterNodeIPAddress')]",
     "ipOctet01": "[concat(split(variables('sa'), '.')[0], '.', split(variables('sa'), '.')[1], '.')]",
     "ipOctet2": "[int(split(variables('sa'), '.')[2])]",
@@ -315,7 +315,7 @@
       "properties": {
         "mode": "Incremental",
         "templateLink": {
-          "uri": "[concat(variables('scriptsUri'), '/master-node.json')]",
+          "uri": "[concat(variables('scriptsUri'), '/nestedtemplates/master-node.json')]",
           "contentVersion": "1.0.0.1"
         },
         "parameters": {
@@ -404,7 +404,7 @@
       "properties": {
         "mode": "Incremental",
         "templateLink": {
-          "uri": "[concat(variables('scriptsUri'), '/setup-cloudera.json')]",
+          "uri": "[concat(variables('scriptsUri'), '/nestedtemplates/setup-cloudera.json')]",
           "contentVersion": "1.0.0.1"
         },
         "parameters": {

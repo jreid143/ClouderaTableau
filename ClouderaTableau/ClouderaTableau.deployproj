@@ -28,17 +28,19 @@
     <Content Include="azuredeploy.parameters.json" />
     <Content Include="azuredeploy.json" />
     <Content Include=".gitattributes" />
-    <Content Include="data-node-ds13.json" />
-    <Content Include="data-node-ds14.json" />
     <None Include="Deployment.targets">
       <Visible>False</Visible>
     </None>
     <Content Include="Deploy-AzureResourceGroup.ps1" />
+    <Content Include="nestedtemplates\data-node-ds13.json" />
+    <Content Include="nestedtemplates\data-node-ds14.json" />
+    <Content Include="nestedtemplates\ds13.json" />
+    <Content Include="nestedtemplates\master-node.json" />
+    <Content Include="nestedtemplates\setup-cloudera.json" />
+    <Content Include="nestedtemplates\shared-resources-existing-vnet.json" />
+    <Content Include="nestedtemplates\shared-resources-new-vnet.json" />
     <Content Include="README.md" />
-    <Content Include="ds13.json" />
-    <Content Include="master-node.json" />
     <Content Include="scripts\bootstrap-cloudera.sh" />
-    <Content Include="setup-cloudera.json" />
     <Content Include="LICENSE.txt" />
     <Content Include="deploy_cdh.ps1" />
     <Content Include="scripts\cmxDeployOnIbiza.py" />
@@ -47,9 +49,12 @@
     <Content Include="scripts\install-postgresql.sh" />
     <Content Include="scripts\prepare-datanode-disks.sh" />
     <Content Include="scripts\prepare-masternode-disks.sh" />
-    <Content Include="shared-resources-existing-vnet.json" />
-    <Content Include="shared-resources-new-vnet.json" />
-    <None Include="tableau-server.json" />
+    <None Include="nestedtemplates\tableau-server.json" />
   </ItemGroup>
   <Target Name="GetReferenceAssemblyPaths" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties nestedtemplates_4ds13_1json__JSONSchema="http://json.schemastore.org/tsd" />
+    </VisualStudio>
+  </ProjectExtensions>
 </Project>
