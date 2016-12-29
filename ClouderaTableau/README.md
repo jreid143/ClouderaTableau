@@ -1,11 +1,15 @@
 # Deploy a Cloudera Express cluster with the option to unlock Cloudera Enterprise features for a free 60-day trial
 # Will also deploy the latest Bring Your Own License version of Tableau
+# Important!  You must increase the default 20 cores in theregion you are deploying
 Once the trial has concluded, the Cloudera Enterprise features will be disabled until you obtain and upload a license.
 
 # By clicking "Deploy to Azure" you agree to the Terms and Conditions below.
 # Deployment to Azure (use this if you are not sure)
 <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fjreid143%2FClouderaTableau%2Fmaster%2Fazuredeploy.json" target="_blank">
     <img src="http://azuredeploy.net/deploybutton.png" />
+</a>
+<a href="http://armviz.io/#/?load=https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fjreid143%2FClouderaTableau%2Fmaster%2Fazuredeploy.json" target="_blank">
+    <img src="http://armviz.io/visualizebutton.png"/>
 </a>
 
 
@@ -111,7 +115,7 @@ The following table outlines the deployment topology characteristics for each su
 
 | T-Shirt Size | Member Node VM Size | CPU Cores | Memory | Data Disks | # of Master Node VMs | Services Placement of Master Node |
 |:--- |:---|:---|:---|:---|:---|:---|:---|
-| Eval | Standard_DS14 | 10 | 112 GB | 10x1000 GB | 1 | 1 (primary, secondary, cloudera manager) |
+| Eval | Standard_DS14 | 16 | 112 GB | 10x1000 GB | 1 | 1 (primary, secondary, cloudera manager) |
 | Prod | Standard_DS14 | 10 | 112 GB | 10x1000 GB | 3 | 1 primary, 1 standby (HA), 1 cloudera manager |
 
 ##Connecting to the cluster
