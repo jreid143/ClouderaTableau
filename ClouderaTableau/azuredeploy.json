@@ -249,8 +249,8 @@
     "subnetPrefix": "[parameters('subnetPrefix')]",
     "subnet1Prefix": "[parameters('subnet1Prefix')]",
     "scriptsUri": "https://raw.githubusercontent.com/jreid143/ClouderaTableau/master/ClouderaTableau",
-    "share-resourcesUri": "[concat(variables('scriptsUri'), '/nestedtemplates/shared-resources-', parameters('vnetNewOrExisting'), '-vnet.json')]",
-    "data-nodeUri": "[concat(variables('scriptsUri'), '/nestedtemplates/data-node-', toLower(subString(parameters('vmSize'), 9, 4)), '.json')]",
+    "share-resourcesUri": "[concat(variables('scriptsUri'), '/nested/shared-resources-', parameters('vnetNewOrExisting'), '-vnet.json')]",
+    "data-nodeUri": "[concat(variables('scriptsUri'), '/nested/data-node-', toLower(subString(parameters('vmSize'), 9, 4)), '.json')]",
     "sa": "[parameters('masterNodeIPAddress')]",
     "tableau": "[parameters('tableauIPAddress')]",
     "ipOctet01": "[concat(split(variables('sa'), '.')[0], '.', split(variables('sa'), '.')[1], '.')]",
@@ -345,7 +345,7 @@
       "properties": {
         "mode": "Incremental",
         "templateLink": {
-          "uri": "[concat(variables('scriptsUri'), '/nestedtemplates/master-node.json')]",
+          "uri": "[concat(variables('scriptsUri'), '/nested/master-node.json')]",
           "contentVersion": "1.0.0.1"
         },
         "parameters": {
@@ -433,7 +433,7 @@
       "properties": {
         "mode": "Incremental",
         "templateLink": {
-          "uri": "[concat(variables('scriptsUri'), '/nestedtemplates/tableau-server.json')]",
+          "uri": "[concat(variables('scriptsUri'), '/nested/tableau-server.json')]",
           "contentVersion": "1.0.0.1"
         },
         "parameters": {
@@ -478,7 +478,7 @@
       "properties": {
         "mode": "Incremental",
         "templateLink": {
-          "uri": "[concat(variables('scriptsUri'), '/nestedtemplates/setup-cloudera.json')]",
+          "uri": "[concat(variables('scriptsUri'), '/nested/setup-cloudera.json')]",
           "contentVersion": "1.0.0.1"
         },
         "parameters": {
