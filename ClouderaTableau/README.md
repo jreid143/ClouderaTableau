@@ -151,7 +151,7 @@ Once the deployment is complete, you can navigate to the Cloudera portal to watc
 To generate and load the sample data, connect to the "-mn0" Cloudera master node (referenced above) using PuTTY or another SSH client tool.  Execute the following commands via the command line:
 
 - sudo su - hdfs
-- get https://clouderatableau.blob.core.windows.net/datagen/datagen.tar.gz
+- wget https://clouderatableau.blob.core.windows.net/datagen/datagen.tar.gz
 - tar -zxf datagen.tar.gz
 - cd datagen
 - sh datagen.sh 2

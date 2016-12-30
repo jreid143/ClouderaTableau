@@ -49,6 +49,7 @@
     <Content Include="scripts\install-postgresql.sh" />
     <Content Include="scripts\prepare-datanode-disks.sh" />
     <Content Include="scripts\prepare-masternode-disks.sh" />
+    <None Include="metadata.json" />
     <None Include="nested\tableau-server.json" />
   </ItemGroup>
   <Target Name="GetReferenceAssemblyPaths" />
