@@ -9,6 +9,13 @@
         "description": "Admin user name for the VMs"
       }
     },
+    "scriptsUri": {
+      "type": "string",
+      "defaultValue": "https://raw.githubusercontent.com/azure/azure-quickstart-templates/cloudera-tableau",
+      "metadata": {
+        "descritption": "The location of the templates and resources"
+      }
+    },
     "adminPassword": {
       "type": "securestring",
       "metadata": {
@@ -248,7 +255,7 @@
     "addressPrefix": "[parameters('addressPrefix')]",
     "subnetPrefix": "[parameters('subnetPrefix')]",
     "subnet1Prefix": "[parameters('subnet1Prefix')]",
-    "scriptsUri": "https://raw.githubusercontent.com/jreid143/ClouderaTableau/master/ClouderaTableau",
+    "scriptsUri": "[parameters('scriptsUri')]",
     "share-resourcesUri": "[concat(variables('scriptsUri'), '/nested/shared-resources-', parameters('vnetNewOrExisting'), '-vnet.json')]",
     "data-nodeUri": "[concat(variables('scriptsUri'), '/nested/data-node-', toLower(subString(parameters('vmSize'), 9, 4)), '.json')]",
     "sa": "[parameters('masterNodeIPAddress')]",

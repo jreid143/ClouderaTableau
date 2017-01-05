@@ -1,33 +1,99 @@
 {
-    "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
-    "contentVersion": "1.0.0.1",
-    "parameters": {
-      "storageAccountPrefix": {
-        "value": "GEN-UNIQUE"
-      },
-      "dnsNamePrefix": {
-        "value": "GEN-UNIQUE"
-      },
-        "adminUserName": {
-            "value": "p2padmin"
-        },
-      "adminPassword": {
-        "value": "GEN-PASSWORD"
-      },
-        "cmUsername": {
-            "value": "p2padmin"
-        },
-      "cmPassword": {
-        "value": "GEN-PASSWORD"
-      },
-        "masterStorageAccountType": {
-            "value": "Standard_LRS"
-        },
-        "virtualNetworkName": {
-            "value": "cltabVNet"
-        },
-        "subnet1Name": {
-            "value": "tableausubnet"
-        }
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.1",
+  "parameters": {
+    "scriptsUri": {
+      "value": "https://raw.githubusercontent.com/jreid143/ClouderaTableau/master/ClouderaTableau"
+    },
+    "adminUserName": {
+      "value": "p2padmin"
+    },
+    "adminPassword": {
+      "value": "GEN-PASSWORD"
+    },
+    "cmUsername": {
+      "value": "p2padmin"
+    },
+    "cmPassword": {
+      "value": "GEN-PASSWORD"
+    },
+    "storageAccountPrefix": {
+      "value": "GEN-UNIQUE"
+    },
+    "dnsNamePrefix": {
+      "value": "GEN-UNIQUE"
+    },
+    "masterStorageAccountType": {
+      "value": "Premium_LRS"
+    },
+    "workerStorageAccountType": {
+      "value": "Standard_LRS"
+    },
+    "virtualNetworkName": {
+      "value": "cltabVNet"
+    },
+    "vnetNewOrExisting": {
+      "value": "new"
+    },
+    "metadata": {
+      "value": ""
+    },
+    "virtualNetworkRGName": {
+      "value": ""
+    },
+    "addressPrefix": {
+      "value": "10.0.0.0/16"
+    },
+    "subnetName": {
+      "value": "clouderasubnet"
+    },
+    "subnetPrefix": {
+      "value": "10.0.2.0/24"
+    },
+    "subnet1Name": {
+      "value": "tableausubnet"
+    },
+    "subnet1Prefix": {
+      "value": "10.0.1.0/24"
+    },
+    "masterNodeIPAddress": {
+      "value": ""
+    },
+    "tableauIPAddress": {
+      "value": ""
+    },
+    "dataNodeIPOffSetFromMaster": {
+      "value": ""
+    },
+    "tshirtSize": {
+      "value": ""
+    },
+    "numberOfDataNodes": {
+      "value": ""
+    },
+    "vmSize": {
+      "value": ""
+    },
+    "company": {
+      "value": ""
+    },
+    "emailAddress": {
+      "value": ""
+    },
+    "businessPhone": {
+      "value": ""
+    },
+    "firstName": {
+      "value": ""
+    },
+    "lastName": {
+      "value": ""
+    },
+    "jobRole": {
+      "value": ""
+    },
+    "jobFunction": {
+      "value": ""
     }
+  }
 }
