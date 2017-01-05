@@ -31,7 +31,6 @@
     <None Include="Deployment.targets">
       <Visible>False</Visible>
     </None>
-    <Content Include="deploy-azureresourcegroup.ps1" />
     <Content Include="nested\data-node-ds13.json" />
     <Content Include="nested\data-node-ds14.json" />
     <Content Include="nested\ds13.json" />
@@ -42,8 +41,9 @@
     <Content Include="README.md" />
     <Content Include="scripts\bootstrap-cloudera.sh" />
     <Content Include="LICENSE.txt" />
-    <Content Include="deploy_cdh.ps1" />
     <Content Include="scripts\cmxDeployOnIbiza.py" />
+    <Content Include="scripts\deploy-azureresourcegroup.ps1" />
+    <Content Include="scripts\deploy_cdh.ps1" />
     <Content Include="scripts\initialize-cloudera-server.sh" />
     <Content Include="scripts\initialize-node.sh" />
     <Content Include="scripts\install-postgresql.sh" />

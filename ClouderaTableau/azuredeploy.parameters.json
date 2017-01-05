@@ -63,13 +63,13 @@
       "value": ""
     },
     "dataNodeIPOffSetFromMaster": {
-      "value": ""
+      "value": 5
     },
     "tshirtSize": {
-      "value": ""
+      "value": "Eval"
     },
     "numberOfDataNodes": {
-      "value": ""
+      "value": 3
     },
     "vmSize": {
       "value": ""
@@ -90,10 +90,10 @@
       "value": ""
     },
     "jobRole": {
-      "value": ""
+      "value": "Administrator"
     },
     "jobFunction": {
-      "value": ""
+      "value": "Infrastructure"
     }
   }
 }
