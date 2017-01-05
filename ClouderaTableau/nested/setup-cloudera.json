@@ -64,6 +64,7 @@
       "name": "[concat(parameters('dnsNamePrefix'), '-mn0', '/prepareDisks')]",
       "apiVersion": "[parameters('resourceAPIVersion')]",
       "location": "[resourceGroup().location]",
+      "comments": "Cloudera Setup extensions that run to configure the Cloudera cluster environment",
       "properties": {
         "publisher": "Microsoft.Azure.Extensions",
         "type": "CustomScript",

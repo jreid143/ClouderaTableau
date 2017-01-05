@@ -283,6 +283,7 @@
       "name": "shared-resources",
       "type": "Microsoft.Resources/deployments",
       "apiVersion": "[variables('templateAPIVersion')]",
+      "comments": "Utilizes the shared resources configurations.  Uses the DS13 servers sizes for the deployment",
       "properties": {
         "mode": "Incremental",
         "templateLink": {
@@ -309,6 +310,7 @@
       "name": "master-node",
       "type": "Microsoft.Resources/deployments",
       "apiVersion": "[variables('templateAPIVersion')]",
+      "comments": "Cloudera Master Node resource",
       "dependsOn": [
         "Microsoft.Resources/deployments/shared-resources"
       ],
@@ -353,6 +355,7 @@
       "name": "data-node",
       "type": "Microsoft.Resources/deployments",
       "apiVersion": "[variables('templateAPIVersion')]",
+      "comments": "Cloudera Data Node resource",
       "dependsOn": [
         "Microsoft.Resources/deployments/shared-resources"
       ],
@@ -397,6 +400,7 @@
       "name": "setup-cloudera",
       "type": "Microsoft.Resources/deployments",
       "apiVersion": "[variables('templateAPIVersion')]",
+      "comments": "Resources that setup the Cloudera cluster",
       "dependsOn": [
         "Microsoft.Resources/deployments/data-node",
         "Microsoft.Resources/deployments/master-node"

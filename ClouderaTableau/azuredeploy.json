@@ -317,6 +317,7 @@
       "name": "shared-resources",
       "type": "Microsoft.Resources/deployments",
       "apiVersion": "[variables('templateAPIVersion')]",
+      "comments": "Resources that are shared within the infrastructure environment",
       "properties": {
         "mode": "Incremental",
         "templateLink": {
@@ -346,6 +347,7 @@
       "name": "master-node",
       "type": "Microsoft.Resources/deployments",
       "apiVersion": "[variables('templateAPIVersion')]",
+      "comments": "Cloudera master node that manages the cluster nodes",
       "dependsOn": [
         "Microsoft.Resources/deployments/shared-resources"
       ],
@@ -390,6 +392,7 @@
       "name": "data-node",
       "type": "Microsoft.Resources/deployments",
       "apiVersion": "[variables('templateAPIVersion')]",
+      "comments": "Cloudera data nodes or cluster members",
       "dependsOn": [
         "Microsoft.Resources/deployments/shared-resources"
       ],
@@ -434,6 +437,7 @@
       "name": "tableau-server",
       "type": "Microsoft.Resources/deployments",
       "apiVersion": "[variables('templateAPIVersion')]",
+      "comments": "Tableau Server offering from the Azure market place",
       "dependsOn": [
         "Microsoft.Resources/deployments/shared-resources"
       ],
@@ -478,6 +482,7 @@
       "name": "setup-cloudera",
       "type": "Microsoft.Resources/deployments",
       "apiVersion": "[variables('templateAPIVersion')]",
+      "comments": "Scripts and configuration settings that intialize the Cloudera cluster environment",
       "dependsOn": [
         "Microsoft.Resources/deployments/data-node",
         "Microsoft.Resources/deployments/master-node"

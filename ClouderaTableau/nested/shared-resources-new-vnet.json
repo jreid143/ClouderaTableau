@@ -25,6 +25,7 @@
       "type": "Microsoft.Compute/availabilitySets",
       "name": "[parameters('masterNodeASName')]",
       "location": "[resourceGroup().location]",
+      "comments": "Master Node Name",
       "properties": {}
     },
     {
@@ -32,6 +33,7 @@
       "type": "Microsoft.Compute/availabilitySets",
       "name": "[parameters('dataNodeASName')]",
       "location": "[resourceGroup().location]",
+      "comments": "Data Node Name",
       "properties": {}
     },
     {
@@ -39,6 +41,7 @@
       "type": "Microsoft.Compute/availabilitySets",
       "name": "[parameters('tableauASName')]",
       "location": "[resourceGroup().location]",
+      "comments": "Tableau Server Name",
       "properties": {}
     },
     {
@@ -46,6 +49,7 @@
       "type": "Microsoft.Network/networkSecurityGroups",
       "name": "[concat(parameters('networkSpec').virtualNetworkName, '-sg')]",
       "location": "[resourceGroup().location]",
+      "comments": "Provides Network Security Group rules",
       "properties": {
         "securityRules": [
           {
@@ -269,6 +273,7 @@
         "[concat('Microsoft.Network/networkSecurityGroups/', parameters('networkSpec').virtualNetworkName, '-sg')]"
       ],
       "location": "[resourceGroup().location]",
+      "comments": "Shared Resources Virtual Network configuration",
       "properties": {
         "addressSpace": {
           "addressPrefixes": [

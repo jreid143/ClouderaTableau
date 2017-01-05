@@ -13,6 +13,9 @@
     },
     "dataNodeASName": {
       "type": "string"
+    },
+    "tableauASName": {
+      "type": "string"
     }
   },
   "variables": {},
@@ -22,20 +25,31 @@
       "type": "Microsoft.Compute/availabilitySets",
       "name": "[parameters('masterNodeASName')]",
       "location": "[resourceGroup().location]",
-      "properties": { }
+      "comments": "Master Node Name",
+      "properties": {}
     },
     {
       "apiVersion": "[parameters('resourceAPIVersion')]",
       "type": "Microsoft.Compute/availabilitySets",
       "name": "[parameters('dataNodeASName')]",
       "location": "[resourceGroup().location]",
-      "properties": { }
+      "comments": "Data Node Name",
+      "properties": {}
+    },
+    {
+      "apiVersion": "[parameters('resourceAPIVersion')]",
+      "type": "Microsoft.Compute/availabilitySets",
+      "name": "[parameters('tableauASName')]",
+      "location": "[resourceGroup().location]",
+      "comments": "Tableau Server Name",
+      "properties": {}
     },
     {
       "apiVersion": "[parameters('resourceAPIVersion')]",
       "type": "Microsoft.Network/networkSecurityGroups",
       "name": "[concat(parameters('networkSpec').virtualNetworkName, '-sg')]",
       "location": "[resourceGroup().location]",
+      "comments": "Shared Resources Network Security Group Rules",
       "properties": {
         "securityRules": [
           {

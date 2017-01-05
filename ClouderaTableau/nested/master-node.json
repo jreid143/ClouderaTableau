@@ -45,6 +45,7 @@
       "type": "Microsoft.Network/networkSecurityGroups",
       "name": "[variables('securityGroupName')]",
       "location": "[resourceGroup().location]",
+      "comments": "Shared Resources Network Security Group Rules",
       "properties": {
         "securityRules": [
           {
@@ -237,6 +238,7 @@
       "name": "[concat(copyIndex(), variables('storageAccountName'))]",
       "apiVersion": "[parameters('resourceAPIVersion')]",
       "location": "[resourceGroup().location]",
+      "comments": "Master Node storage account configurations",
       "copy": {
         "name": "storageAccountLoop",
         "count": "[parameters('vmCount')]"
@@ -250,6 +252,7 @@
       "type": "Microsoft.Network/publicIPAddresses",
       "name": "[concat(variables('publicIPAddressName'), copyIndex())]",
       "location": "[resourceGroup().location]",
+      "comments": "Master Node Public IP Address configuration",
       "copy": {
         "name": "publicIPLoop",
         "count": "[parameters('vmCount')]"
@@ -266,6 +269,7 @@
       "type": "Microsoft.Network/networkInterfaces",
       "name": "[concat(variables('nicName'), copyIndex())]",
       "location": "[resourceGroup().location]",
+      "comments": "Master Node network interface configuration",
       "dependsOn": [
         "[concat('Microsoft.Network/publicIPAddresses/', variables('publicIPAddressName'), copyIndex())]",
         "[concat('Microsoft.Network/networkSecurityGroups/', variables('securityGroupName'))]"
@@ -300,6 +304,7 @@
       "type": "Microsoft.Compute/virtualMachines",
       "name": "[concat(variables('vmName'), copyIndex())]",
       "location": "[resourceGroup().location]",
+      "comments": "Master Node virtual machines configurations",
       "copy": {
         "name": "masterNodeNicLoop",
         "count": "[parameters('vmCount')]"
@@ -391,6 +396,7 @@
       "name": "[concat(variables('vmName'), copyIndex(), '/prepareDisks')]",
       "apiVersion": "[parameters('resourceAPIVersion')]",
       "location": "[resourceGroup().location]",
+      "comments": "Master Node VM Extensions and scripts to configure the Cloudera cluster",
       "copy": {
         "name": "nameNodeNicLoop",
         "count": "[parameters('vmCount')]"
