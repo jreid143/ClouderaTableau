@@ -1,7 +1,7 @@
 # Deploy a Cloudera Express cluster with the option to unlock Cloudera Enterprise features for a free 60-day trial
 # Will also deploy the latest Bring Your Own License version of Tableau
 # Important!  You must increase the default 20 cores in theregion you are deploying
-Once the trial has concluded, the Cloudera Enterprise features will be disabled until you obtain and upload a license.
+# Once the trial has concluded, the Cloudera Enterprise features will be disabled until you obtain and upload a license.
 
 # By clicking "Deploy to Azure" you agree to the Terms and Conditions below.
 # Deployment to Azure (use this if you are not sure)
