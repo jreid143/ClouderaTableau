@@ -8,20 +8,14 @@
     "adminUserName": {
       "value": "p2padmin"
     },
-    "adminPassword": {
-      "value": "GEN-PASSWORD"
-    },
     "cmUsername": {
       "value": "p2padmin"
     },
-    "cmPassword": {
-      "value": "GEN-PASSWORD"
-    },
     "storageAccountPrefix": {
-      "value": "GEN-UNIQUE"
+      "value": "p2p"
     },
     "dnsNamePrefix": {
-      "value": "GEN-UNIQUE"
+      "value": "p2p"
     },
     "masterStorageAccountType": {
       "value": "Premium_LRS"
@@ -34,9 +28,6 @@
     },
     "vnetNewOrExisting": {
       "value": "new"
-    },
-    "metadata": {
-      "value": ""
     },
     "virtualNetworkRGName": {
       "value": ""
@@ -57,10 +48,10 @@
       "value": "10.0.1.0/24"
     },
     "masterNodeIPAddress": {
-      "value": ""
+      "value": "10.0.2.4"
     },
     "tableauIPAddress": {
-      "value": ""
+      "value": "10.0.1.4"
     },
     "dataNodeIPOffSetFromMaster": {
       "value": 5
@@ -75,25 +66,31 @@
       "value": ""
     },
     "company": {
-      "value": ""
+      "value": "Company"
     },
     "emailAddress": {
-      "value": ""
+      "value": "someon@somewhere.com"
     },
     "businessPhone": {
-      "value": ""
+      "value": "55555555"
     },
     "firstName": {
-      "value": ""
+      "value": "someone"
     },
     "lastName": {
-      "value": ""
+      "value": "Somewhere"
     },
     "jobRole": {
       "value": "Administrator"
     },
     "jobFunction": {
       "value": "Infrastructure"
-    }
+    },
+      "adminPassword": {
+          "value": "Welcome.1234"
+      },
+      "cmPassword": {
+          "value": "Welcome.1234"
+      }
   }
 }
