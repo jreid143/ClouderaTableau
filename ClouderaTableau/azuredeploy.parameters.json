@@ -3,19 +3,19 @@
   "contentVersion": "1.0.0.1",
   "parameters": {
     "scriptsUri": {
-      "value": "https://raw.githubusercontent.com/jreid143/ClouderaTableau/master/ClouderaTableau"
+      "value": "https://raw.githubusercontent.com/Azure/azure-quickstart-templates/cloudera-tableau"
     },
     "adminUserName": {
-      "value": "p2padmin"
+      "value": "azureuser"
     },
     "cmUsername": {
-      "value": "p2padmin"
+      "value": "cmadmin"
     },
     "storageAccountPrefix": {
-      "value": "p2p"
+      "value": "GEN-UNIQUE"
     },
     "dnsNamePrefix": {
-      "value": "p2p"
+      "value": "GEN-UNIQUE"
     },
     "masterStorageAccountType": {
       "value": "Premium_LRS"
